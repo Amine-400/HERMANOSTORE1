@@ -196,6 +196,20 @@
     .add-to-cart-btn:hover {
       background-color: #218838;
     }
+
+    .buy-now-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .buy-now-btn:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -217,14 +231,20 @@
     <a href="chaussures.html" class="section">
       <img src="https://i.ibb.co/bMLfcQsQ/734bdc68-02bc-41cf-92b8-8e99269317a4.jpg" alt="Chaussures">
       <h2>Chaussures Sportives</h2>
+      <button class="add-to-cart-btn" onclick="addToCart('Chaussures Sportives', 50)">Ajouter au Panier</button>
+      <button class="buy-now-btn" onclick="window.location.href='checkout.html'">Acheter maintenant</button>
     </a>
     <a href="vetements.html" class="section">
       <img src="https://i.ibb.co/Q3JZy7XR/cd11e763-4084-4a35-a040-506abb46b651.jpg" alt="Vêtements">
       <h2>Vêtements Sportifs</h2>
+      <button class="add-to-cart-btn" onclick="addToCart('Vêtements Sportifs', 30)">Ajouter au Panier</button>
+      <button class="buy-now-btn" onclick="window.location.href='checkout.html'">Acheter maintenant</button>
     </a>
     <a href="casquettes.html" class="section">
       <img src="https://i.ibb.co/JWC55xC3/4b3335bc-f53f-4cfe-9ba4-79de478131e1.jpg" alt="Casquettes">
       <h2>Casquettes</h2>
+      <button class="add-to-cart-btn" onclick="addToCart('Casquettes', 20)">Ajouter au Panier</button>
+      <button class="buy-now-btn" onclick="window.location.href='checkout.html'">Acheter maintenant</button>
     </a>
   </div>
 
