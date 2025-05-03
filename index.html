@@ -37,6 +37,37 @@
       margin-bottom: 10px;
     }
 
+    .cart-container {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background-color: #FFD700;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cart-container:hover {
+      background-color: #ffcc00;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background-color: red;
+      color: white;
+      font-size: 12px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      text-align: center;
+    }
+
     .marquee-container {
       position: absolute;
       bottom: 10px;
@@ -151,6 +182,20 @@
     .floating-buttons a:hover {
       transform: scale(1.1);
     }
+
+    .add-to-cart-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .add-to-cart-btn:hover {
+      background-color: #218838;
+    }
   </style>
 </head>
 <body>
@@ -161,20 +206,28 @@
       <div class="marquee-text">Découvrez nos catégories exclusives</div>
       <div class="marquee-text">توصيل إلى جميع ربوع المملكة في غضون 24 ساعة</div>
     </div>
+    <!-- Cart button -->
+    <div class="cart-container" id="cart-container">
+      <i class="fa fa-shopping-cart"></i>
+      <div class="cart-count" id="cart-count">0</div>
+    </div>
   </header>
 
   <div class="sections">
     <a href="chaussures.html" class="section">
       <img src="https://i.ibb.co/bMLfcQsQ/734bdc68-02bc-41cf-92b8-8e99269317a4.jpg" alt="Chaussures">
       <h2>Chaussures Sportives</h2>
+      <button class="add-to-cart-btn" onclick="addToCart('Chaussures Sportives', 50)">Ajouter au Panier</button>
     </a>
     <a href="vetements.html" class="section">
       <img src="https://i.ibb.co/Q3JZy7XR/cd11e763-4084-4a35-a040-506abb46b651.jpg" alt="Vêtements">
       <h2>Vêtements Sportifs</h2>
+      <button class="add-to-cart-btn" onclick="addToCart('Vêtements Sportifs', 30)">Ajouter au Panier</button>
     </a>
     <a href="casquettes.html" class="section">
       <img src="https://i.ibb.co/JWC55xC3/4b3335bc-f53f-4cfe-9ba4-79de478131e1.jpg" alt="Casquettes">
       <h2>Casquettes</h2>
+      <button class="add-to-cart-btn" onclick="addToCart('Casquettes', 20)">Ajouter au Panier</button>
     </a>
   </div>
 
@@ -191,5 +244,20 @@
   <footer>
     <p>&copy; 2025 Boutique Sportive. Tous droits réservés.</p>
   </footer>
+
+  <script>
+    let cart = [];
+    
+    function addToCart(productName, productPrice) {
+      cart.push({ name: productName, price: productPrice });
+      updateCartDisplay();
+    }
+
+    function updateCartDisplay() {
+      document.getElementById('cart-count').innerText = cart.length;
+      const total = cart.reduce((sum, item) => sum + item.price, 0);
+      document.getElementById('cart-container').title = Total: ${total} MAD;
+    }
+  </script>
 </body>
 </html>
