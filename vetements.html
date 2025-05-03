@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vêtements Sportifs</title>
+  <style>
+    body { font-family: sans-serif; background: #f9f9f9; margin: 0; }
+    header, footer { background: #111; color: #fff; text-align: center; padding: 20px; }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .product {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    .product img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; }
+    .product h3 { margin: 15px 0 10px; }
+    .product button {
+      background: #111;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    .formulaire {
+      display: none;
+      margin-top: 15px;
+      text-align: left;
+    }
+    .formulaire input, .formulaire textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+  </style>
+  <script>
+    function toggleForm(id) {
+      const form = document.getElementById(id);
+      form.style.display = form.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Vêtements Sportifs</h1>
+  </header>
+  <div class="products">
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200?text=Vêtement+1" alt="Vêtement 1" />
+      <h3>Vêtement 1</h3>
+      <p>Description du produit 1</p>
+      <button onclick="toggleForm('form1')">Acheter maintenant</button>
+      <div class="formulaire" id="form1">
+        <input type="text" placeholder="Nom complet" />
+        <input type="text" placeholder="Adresse" />
+        <input type="tel" placeholder="Téléphone" />
+        <textarea placeholder="Autres détails"></textarea>
+        <button>Envoyer la commande</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200?text=Vêtement+2" alt="Vêtement 2" />
+      <h3>Vêtement 2</h3>
+      <p>Description du produit 2</p>
+      <button onclick="toggleForm('form2')">Acheter maintenant</button>
+      <div class="formulaire" id="form2">
+        <input type="text" placeholder="Nom complet" />
+        <input type="text" placeholder="Adresse" />
+        <input type="tel" placeholder="Téléphone" />
+        <textarea placeholder="Autres détails"></textarea>
+        <button>Envoyer la commande</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200?text=Vêtement+3" alt="Vêtement 3" />
+      <h3>Vêtement 3</h3>
+      <p>Description du produit 3</p>
+      <button onclick="toggleForm('form3')">Acheter maintenant</button>
+      <div class="formulaire" id="form3">
+        <input type="text" placeholder="Nom complet" />
+        <input type="text" placeholder="Adresse" />
+        <input type="tel" placeholder="Téléphone" />
+        <textarea placeholder="Autres détails"></textarea>
+        <button>Envoyer la commande</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200?text=Vêtement+4" alt="Vêtement 4" />
+      <h3>Vêtement 4</h3>
+      <p>Description du produit 4</p>
+      <button onclick="toggleForm('form4')">Acheter maintenant</button>
+      <div class="formulaire" id="form4">
+        <input type="text" placeholder="Nom complet" />
+        <input type="text" placeholder="Adresse" />
+        <input type="tel" placeholder="Téléphone" />
+        <textarea placeholder="Autres détails"></textarea>
+        <button>Envoyer la commande</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200?text=Vêtement+5" alt="Vêtement 5" />
+      <h3>Vêtement 5</h3>
+      <p>Description du produit 5</p>
+      <button onclick="toggleForm('form5')">Acheter maintenant</button>
+      <div class="formulaire" id="form5">
+        <input type="text" placeholder="Nom complet" />
+        <input type="text" placeholder="Adresse" />
+        <input type="tel" placeholder="Téléphone" />
+        <textarea placeholder="Autres détails"></textarea>
+        <button>Envoyer la commande</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200?text=Vêtement+6" alt="Vêtement 6" />
+      <h3>Vêtement 6</h3>
+      <p>Description du produit 6</p>
+      <button onclick="toggleForm('form6')">Acheter maintenant</button>
+      <div class="formulaire" id="form6">
+        <input type="text" placeholder="Nom complet" />
+        <input type="text" placeholder="Adresse" />
+        <input type="tel" placeholder="Téléphone" />
+        <textarea placeholder="Autres détails"></textarea>
+        <button>Envoyer la commande</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200?text=Vêtement+7" alt="Vêtement 7" />
+      <h3>Vêtement 7</h3>
+      <p>Description du produit 7</p>
+      <button onclick="toggleForm('form7')">Acheter maintenant</button>
+      <div class="formulaire" id="form7">
+        <input type="text" placeholder="Nom complet" />
+        <input type="text" placeholder="Adresse" />
+        <input type="tel" placeholder="Téléphone" />
+        <textarea placeholder="Autres détails"></textarea>
+        <button>Envoyer la commande</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200?text=Vêtement+8" alt="Vêtement 8" />
+      <h3>Vêtement 8</h3>
+      <p>Description du produit 8</p>
+      <button onclick="toggleForm('form8')">Acheter maintenant</button>
+      <div class="formulaire" id="form8">
+        <input type="text" placeholder="Nom complet" />
+        <input type="text" placeholder="Adresse" />
+        <input type="tel" placeholder="Téléphone" />
+        <textarea placeholder="Autres détails"></textarea>
+        <button>Envoyer la commande</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200?text=Vêtement+9" alt="Vêtement 9" />
+      <h3>Vêtement 9</h3>
+      <p>Description du produit 9</p>
+      <button onclick="toggleForm('form9')">Acheter maintenant</button>
+      <div class="formulaire" id="form9">
+        <input type="text" placeholder="Nom complet" />
+        <input type="text" placeholder="Adresse" />
+        <input type="tel" placeholder="Téléphone" />
+        <textarea placeholder="Autres détails"></textarea>
+        <button>Envoyer la commande</button>
+      </div>
+    </div>
+    
+  </div>
+  <footer>
+    <p>&copy; 2025 Boutique Sportive. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
